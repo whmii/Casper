@@ -15,10 +15,9 @@ const fs = require('fs');
 
 // postcss plugins
 const autoprefixer = require('autoprefixer');
-const colorFunction = require('postcss-color-function');
 const cssnano = require('cssnano');
-const customProperties = require('postcss-custom-properties');
 const easyimport = require('postcss-easy-import');
+const cssnested = require('postcss-nested');
 
 const REPO = 'TryGhost/Casper';
 const REPO_READONLY = 'TryGhost/Casper';
@@ -49,9 +48,8 @@ function css(done) {
     pump([
         src('assets/css/*.css', {sourcemaps: true}),
         postcss([
-            easyimport,
-            customProperties({preserve: false}),
-            colorFunction(),
+            easyimport(),
+            cssnested(),
             autoprefixer(),
             cssnano()
         ]),
@@ -66,10 +64,9 @@ function js(done) {
             // pull in lib files first so our own code can depend on it
             'assets/js/lib/*.js',
             'assets/js/*.js'
-        ], {sourcemaps: true}),
+        ]),
         concat('casper.js'),
-        uglify(),
-        dest('assets/built/', {sourcemaps: '.'}),
+        dest('assets/built/'),
         livereload()
     ], handleError(done));
 }

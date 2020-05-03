@@ -1,8 +1,8 @@
 {
-    "name": "casper",
-    "description": "A clean, minimal default theme for the Ghost publishing platform",
-    "demo": "https://demo.ghost.io",
-    "version": "3.0.12",
+    "name": "whmii-casper-fork",
+    "description": "The ghost theme for making ghost themese",
+    "demo": "https://mcmahan.me",
+    "version": "3.0.13",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
@@ -23,15 +23,15 @@
         "postship": "git fetch && gulp release"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Will H McMahan",
+        "email": "will@mcmahan.me",
+        "url": "https://mcmahan.me"
     },
     "gpm": {
         "type": "theme",
         "categories": [
             "Minimal",
-            "Magazine"
+            "Product"
         ]
     },
     "keywords": [
@@ -41,16 +41,16 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Casper.git"
+        "url": "https://github.com/whmii/Casper"
     },
-    "bugs": "https://github.com/TryGhost/Casper/issues",
-    "contributors": "https://github.com/TryGhost/Casper/graphs/contributors",
+    "bugs": "https://github.com/whmii/Casper/issues",
+    "contributors": "https://github.com/whmii/Casper/graphs/contributors",
     "devDependencies": {
         "@tryghost/release-utils": "0.6.1",
         "autoprefixer": "9.7.6",
         "beeper": "2.0.0",
         "cssnano": "4.1.10",
-        "gscan": "3.5.4",
+        "gscan": "3.4.1",
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
@@ -58,8 +58,6 @@
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.0.1",
         "inquirer": "7.1.0",
-        "postcss-color-function": "4.1.0",
-        "postcss-custom-properties": "9.1.1",
         "postcss-easy-import": "3.0.0",
         "pump": "3.0.0"
     },
